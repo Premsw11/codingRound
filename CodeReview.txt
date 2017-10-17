@@ -1,0 +1,15 @@
+Design Issues with current codebase:-
+Current code is good, but by time application grows and along with that number of test cases grows. So it is batter to use Page Factory model.
+Page Factory model is based on the concept that for each page user need to create one java class, which will contain all the WebElements of the page, and methods used on that page.
+Forced wait has been used in the given code. That is not a good option. Since we don’t know how much it takes to get an element. So explicit wait is good to use.
+One Wrapper class can be created that will contain all the methods that are being used again and again.
+More TestNG annotations can be used in the script. For example @BeforeClass and @AfterClass.
+testNG.xml file can be created to create a test suite, which will contain all the three classes to run.
+
+Refactoring of the code:-
+I have fixed the issues where test cases are failing. Implemented 2 new packages which have scripts in my suggested concept. Package names are as follows-
+codingRound
+PageContainer
+And a testNG.xml file to run all the 3 classes.
+
+Added CodeReview.txt for comments
